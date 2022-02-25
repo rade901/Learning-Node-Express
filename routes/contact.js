@@ -6,7 +6,7 @@ const router = express.Router();
 // route to get a all tracks
 router.get("/contact", (req, res) => {
     res.render("contact.ejs", {
-        title: "contact",
+        title: "Contact",
         welcome: "Welcome to the contact page",
         content: "Content of the contact page"
 

@@ -18,6 +18,11 @@ app.use('/', home);
 app.use('/', about);
 app.use('/', info);
 app.use('/', contact);
+app.get('*', function(req, res){
+    res.status(404).render('404.ejs', {
+        title: "404 Page not found",
+    });
+  });
 
 
 
