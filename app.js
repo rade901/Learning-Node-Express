@@ -7,9 +7,12 @@ const info = require('./routes/info');
 const contact = require('./routes/contact');
 const login = require('./routes/login');
 const adminPage = require('./routes/adminPage');
-const addBlog = require('./routes/add-blog');
+const addPost = require('./routes/add-post');
+const allPosts = require('./routes/all-posts');
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
+
+
 
 
 
@@ -37,7 +40,8 @@ app.use('/', info);
 app.use('/', contact);
 app.use('/', login);
 app.use('/', adminPage);
-app.use('/', addBlog);
+app.use('/', addPost);
+app.use('/', allPosts);
 app.get('*', function(req, res){
     res.status(404).render('404.ejs', {
         title: "404 Page not found",

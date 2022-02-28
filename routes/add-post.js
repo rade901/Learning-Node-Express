@@ -1,19 +1,19 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Blog = require('../models/blog');
+const Post = require('../models/post');
 
 
 const router = express.Router();
 
 // route to get a all tracks
-router.get("/add-blog", (req, res) => {
-    const blog = new Blog({
-        title: 'Test Title',
-        content: 'Test content'
+router.get("/add-post", (req, res) => {
+    const post = new Post({
+        title: 'novi naslov',
+        content: 'novi tekst'
     });
-    blog.save()
-        .then(result => {
-            res.send(result);
+    post.save()
+        .then(restApi => {
+            res.send(restApi);
         })
         .catch(err => {
             console.log(err);
