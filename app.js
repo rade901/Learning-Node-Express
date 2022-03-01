@@ -11,6 +11,7 @@ const addPost = require('./routes/add-post');
 const allPosts = require('./routes/all-posts');
 const PostAdd = require('./routes/add-post');
 const dotenv = require('dotenv').config();
+const {check, validationResult} = require('express-validator');
 const mongoose = require('mongoose');
 
 

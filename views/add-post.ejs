@@ -47,6 +47,13 @@
         <div class="container">
             <div class="row pt-2">
                 <div class="col-sm">
+                    <% if (typeof errorMessage !== "undefined") { %>
+                        <div class="alert alert-danger" role="alert">
+                        <p>Form could not be submitted due to the input all fealds</p>
+                        <p><%= errorMessage %></p>
+                        </div>
+                    <% } %>
+
                     <form action="/add-post" method="post">
                         <div class="form-group">
                             <label for="title">New post</label>
