@@ -24,25 +24,28 @@
         <h1>Posts</h1>
 
         <% Post.forEach(function(post) { %>
-          <div class="container">
+          <div class="d-inline-flex p-2">
+          <div class="col col-lg-12">
+           
           <div class="card mt-2">
             <div class="card-body">
               <h5 class="card-title">
                 <h4><%= post.title %></h4>
               </h5>
-              <p class="card-text">
+              <div class="card-text">
                 <%= post.content %>
-              </p>
-              <p class="card-text">
+              </div>
+              <div class="card-text">
                 <%= post.createdAt.toLocaleDateString() %>
-              </p>
+              </div>
               <a href="/posts/<%= post.id %>/delete" class="btn btn-danger">Delete</a>
               <a href="/posts/<%= post.id %>/edit" class="btn btn-success">Edit</a>
               <a href="/posts/<%= post.id %>/readmore" class="btn btn-primary">Read More</a>
             </div>
           </div>
-         
+          </div>
         </div>
+        
           <% }) %>
 
             <% } %>
