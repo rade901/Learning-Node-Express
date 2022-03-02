@@ -38,7 +38,7 @@
               <div class="card-text">
                 <%= post.createdAt.toLocaleDateString() %>
               </div>
-              <a href="/posts/<%= post.id %>/delete" class="btn btn-danger">Delete</a>
+              <a href="/delete-post/<%= post.id %>/delete" class="btn btn-danger">Delete</a>
               <a href="/posts/<%= post.id %>/edit" class="btn btn-success">Edit</a>
               <a href="/posts/<%= post.id %>/readmore" class="btn btn-primary">Read More</a>
             </div>
@@ -49,6 +49,17 @@
           <% }) %>
 
             <% } %>
+           <div class="container">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="<%=nextPage.nextPage %>">Next</a></li>
+              </ul>
+            </nav>
+           </div>
             <div class="container pt-3">
               <a class="btn btn-success" href="/">Back</a>  
             </div>

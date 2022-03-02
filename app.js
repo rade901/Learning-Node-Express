@@ -10,7 +10,8 @@ const adminPage = require('./routes/adminPage');
 const addPost = require('./routes/add-post');
 const allPosts = require('./routes/all-posts');
 const PostAdd = require('./routes/add-post');
-const dotenv = require('dotenv').config();
+const methodOverride = require('method-override');
+const dotenv = require('dotenv').config(); 
 const {check, validationResult} = require('express-validator');
 const mongoose = require('mongoose');
 
@@ -20,6 +21,7 @@ const mongoose = require('mongoose');
 
 
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 /// CSS
